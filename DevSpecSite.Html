@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSpec Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO DEVSPEC</h1>
+    <p>SIGN UP TO UNLOCK MORE FEATURES</p>
+    <button id="signInBtn">Sign in with Google</button>
+
+    <div id="afterSignIn" class="hidden">
+        <p>GREAT, CONTINUE YOUR ACTION</p>
+        <button id="continueBtn">CONTINUE</button>
+    </div>
+
+    <div id="linksSection" class="hidden">
+        <button onclick="window.open('https://www.roblox.com/communities/36009296/DEVSPEC-COMPORATION#!/about','_blank')">
+            Open Roblox Community
+        </button><br>
+
+        <button onclick="window.open('https://www.roblox.com/games/107690681119721/The-Music-Club','_blank')">
+            Open Roblox DevSpec Music Club Game (Required 18+ ID VERIFIED)
+        </button><br>
+
+        <button onclick="window.open('https://www.roblox.com/games/86194767138704/THE-BEST-OBBY-VERSION-1-0-0','_blank')">
+            Open Roblox DevSpec The Best Obby
+        </button><br>
+
+        <button onclick="window.open('https://www.roblox.com/share?code=6ee09837643320479895aa8fc06d99c3&type=Server','_blank')">
+            Open 99 Nights in The Forest Private Server Link
+        </button><br>
+
+        <button onclick="window.open('https://www.roblox.com/share?code=021297e05ec35441822773de0f5&type=Server','_blank')">
+            Open Roblox Grow A Garden Private Server
+        </button><br>
+
+        <button onclick="window.open('https://www.roblox.com/communities/36009296/DEVSPEC-COMPORATION#!/forums/generals-e7c9f6c1','_blank')">
+            Open Forum Chat
+        </button>
+    </div>
+
+    <script>
+        const signInBtn = document.getElementById('signInBtn');
+        const afterSignIn = document.getElementById('afterSignIn');
+        const continueBtn = document.getElementById('continueBtn');
+        const linksSection = document.getElementById('linksSection');
+
+        signInBtn.addEventListener('click', () => {
+            signInBtn.classList.add('hidden');
+            afterSignIn.classList.remove('hidden');
+        });
+
+        continueBtn.addEventListener('click', () => {
+            afterSignIn.classList.add('hidden');
+            linksSection.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
